@@ -576,4 +576,8 @@ h2 {
         font-size: 17px;
         max-width: 100%;
     }
+
+    .open-btn {
+        padding: 10px 150px;
+    }
 }
