@@ -13,6 +13,36 @@ body {
     position: relative;
 }
 
+.animate-on-load {
+    opacity: 0;
+    transform: translateY(25px);
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: var(--delay, 0s);
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    will-change: opacity, transform;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Оранжевое пятно справа */
 body::before {
     content: '';

@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <section class="section_1">
+    <section class="section_1 animate-on-load">
         <div class="avatar-icon">
             <img  class="avatar" src="assets/avatar.jpg" alt="Avatar Icon">
         </div>
@@ -39,13 +39,13 @@
             </div>
         </div>
     </section>
-    <section class="section_2" id="projects">
+    <section class="section_2 animate-on-load" id="projects">
         <div class="project_text">
             <h1 class="ph">Projects Showcase</h1>
             <p class="ab">A collection of my recent work in web development</p>
         </div>
         <div class="projects_card">
-            <div class="card">
+            <div class="card reveal">
                 <div class="card-imeage">
                     <img class="card-imgi" src="assets/портфолио.jpg" alt="">
                 </div>
@@ -63,7 +63,7 @@
                     <a class="open-btn" href="https://github.com/AzizIo/portfolio" target="_blank">Open</a>
                 </div>
             </div>
-            <div class="card">
+            <div class="card reveal">
                 <div class="card-imeage">
                     <img src="assets/port.jpg" alt="">
                 </div>
@@ -85,7 +85,7 @@
             </div>
         </div>
     </section>
-    <section class="section_3" id="about">
+    <section class="section_3 animate-on-load" id="about">
         <h1 class="ab-me">About Me</h1>
 
         <div class="container">
@@ -114,7 +114,7 @@
                 <h2>Core Skills</h2>
 
                 <div class="skills-grid">
-                    <div class="skill-card">
+                    <div class="skill-card reveal">
                         <div class="card-image">
                             <img class="card-img" src="assets/python-icon.jpg" alt="">
                         </div>
@@ -123,7 +123,7 @@
                         </div>
 
                     </div>
-                    <div class="skill-card">
+                    <div class="skill-card reveal">
                         <div class="card-image">
                             <img class="card-img" src="assets/js-icon.jpg" alt="">
                         </div>
@@ -131,7 +131,7 @@
                             Backend
                         </div>
                     </div>
-                    <div class="skill-card">
+                    <div class="skill-card reveal">
                         <div class="card-image">
                             <img class="card-img" src="assets/d-icon.jpg" alt="">
                         </div>
@@ -139,7 +139,7 @@
                             Database
                         </div>
                     </div>
-                    <div class="skill-card">
+                    <div class="skill-card reveal">
                         <div class="card-image">
                             <img class="card-img" src="assets/h-icon.jpg" alt="">
                         </div>
@@ -151,10 +151,10 @@
             </div>
         </div>
     </section>
-    <section class="tech-steck">
+    <section class="tech-steck animate-on-load">
         <h1 class="stack">Tech Stack</h1>
         <p class="mstack">Technologies and tools I work with</p>
-        <div class="stack-grid">
+        <div class="stack-grid reveal">
             <div class="stack-card">
                 <span class="card-icon">🐍</span>
                 <span class="card-name">Python</span>
@@ -205,10 +205,10 @@
 
         </div>
     </section>
-    <section class="section_1" id="contact">
+    <section class="section_1 animate-on-load" id="contact">
         <h1 class="stack">Get In Touch</h1>
         <p class="mstack">Have a project in mind? Let's work together!</p>
-        <div class="contact-form">
+        <div class="contact-form reveal">
             <div class="form">
                 <p class="-text">Telegram</p>
                 <a class="tg-link" href="https://t.me/bzioz" target="_blank"> Message on Telegram</a>
@@ -219,7 +219,7 @@
         </div>
 
     </section>
-    <section class="lasr">
+    <section class="lasr animate-on-load">
         <hr class="line2">
         <div class="last">
             <div class="last-info">
@@ -253,6 +253,29 @@
                 section.scrollIntoView({ behavior: 'smooth' });
             }
         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Sequential appearance for first content blocks
+            const loadBlocks = document.querySelectorAll('.animate-on-load');
+            loadBlocks.forEach((el, index) => {
+                el.style.animationDelay = (index * 0.15) + 0.1 + 's';
+            });
+
+            // Scroll reveal observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.18 });
+
+            const revealItems = document.querySelectorAll('.reveal');
+            revealItems.forEach((item) => {
+                observer.observe(item);
+            });
+        });
     </script>
 </body>
 
