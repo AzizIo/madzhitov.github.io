@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <title>portfolio</title>
+</head>
+
+<body>
+    <section class="section_1">
+        <div class="avatar-icon">
+            <img  class="avatar" src="assets/avatar.jpg" alt="Avatar Icon">
+        </div>
+        <div class="text_info">
+            <h1>Azizbek Madzhitov</h1>
+            <p class="specialty">Full Stack Developer</p>
+            <div class="abb">
+
+                <p class="about">I create modern web applications and automation tools.
+                    Turning ideas into efficient digital solutions
+                    with clean code and thoughtful engineering.</p>
+            </div>
+            <div class="contact_buttons">
+                <div class="git_button">
+                    <a target="_blank" href="https://github.com/AzizIo"><img class="image" src="./assets/github-svgrepo-com.svg" alt=""></a>
+                </div>
+                <div class="telegram_button">
+                    <a target="_blank" href="https://t.me/bzioz"><img class="image" src="./assets/telegram-svgrepo-com.svg" alt=""></a>
+                </div>
+                <div class="email_button">
+                    <a target="_blank" href="mailto:azizbekmadzhitov@gmail.com"><img class="image" src="./assets/email-1-svgrepo-com.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="viev_button">
+                <button class="button" onclick="scrollToSection('projects')">View Projects</button>
+            </div>
+        </div>
+    </section>
+    <section class="section_2" id="projects">
+        <div class="project_text">
+            <h1 class="ph">Projects Showcase</h1>
+            <p class="ab">A collection of my recent work in web development</p>
+        </div>
+        <div class="projects_card">
+            <div class="card">
+                <div class="card-imeage">
+                    <img class="card-imgi" src="assets/портфолио.jpg" alt="">
+                </div>
+                <div class="card-content">
+                    <h3>Portfolio Website</h3>
+                    <p class="card-description">Modern responsive portfolio with smooth animations and glassmorphism
+                        design</p>
+                </div>
+                <div class="card-tegs">
+                    <span class="teg">HTML</span>
+                    <span class="teg">CSS</span>
+                    <span class="teg">JavaScript</span>
+                </div>
+                <div class="op-btn">
+                    <a class="open-btn" href="https://github.com/AzizIo/portfolio" target="_blank">Open</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-imeage">
+                    <img src="assets/port.jpg" alt="">
+                </div>
+                <div class="card-content">
+                    <h3>Project Manager</h3>
+                    <p class="card-description">This is a React application with authentication that allows the user to
+                        maintain a personal list of projects</p>
+                </div>
+                <div class="card-tegs">
+                    <span class="teg">JSX</span>
+                    <span class="teg">Module CSS</span>
+                    <span class="teg">TypeScript</span>
+                    <span class="teg">React</span>
+                    <span class="teg">SQlite</span>
+                </div>
+                <div class="op-btn">
+                    <a class="open-btn" href="https://github.com/AzizIo/manager" target="_blank">Open</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section_3" id="about">
+        <h1 class="ab-me">About Me</h1>
+
+        <div class="container">
+            <!-- Левая часть -->
+            <div class="greeting">
+                <h2 class="hi">Hi, I'm a Full Stack Developer</h2>
+
+                <p>
+                    I build web applications — both frontend and backend.
+                    I have commercial experience developing real-world projects.
+                </p>
+
+                <p>
+                    I focus on creating apps that are not only functional, but also clean and beautiful.
+                    I'm not afraid of complex tasks — I see them as a chance to grow.
+                </p>
+
+                <p>
+                    When I'm not coding, I explore new technologies
+                    and apply them to make my projects better.
+                </p>
+            </div>
+
+            <!-- Правая часть -->
+            <div class="skills">
+                <h2>Core Skills</h2>
+
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="card-image">
+                            <img class="card-img" src="assets/python-icon.jpg" alt="">
+                        </div>
+                        <div class="card-text">
+                            Frontend
+                        </div>
+
+                    </div>
+                    <div class="skill-card">
+                        <div class="card-image">
+                            <img class="card-img" src="assets/js-icon.jpg" alt="">
+                        </div>
+                        <div class="card-text">
+                            Backend
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="card-image">
+                            <img class="card-img" src="assets/d-icon.jpg" alt="">
+                        </div>
+                        <div class="card-text">
+                            Database
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="card-image">
+                            <img class="card-img" src="assets/h-icon.jpg" alt="">
+                        </div>
+                        <div class="card-text">
+                            DevOps
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="tech-steck">
+        <h1 class="stack">Tech Stack</h1>
+        <p class="mstack">Technologies and tools I work with</p>
+        <div class="stack-grid">
+            <div class="stack-card">
+                <span class="card-icon">🐍</span>
+                <span class="card-name">Python</span>
+            </div>
+            <div class="stack-card">
+                <span class="card-icon">⚡</span>
+                <span class="card-name">JavaScript</span>
+            </div>
+            <div class="stack-card">
+                <span class="card-icon">⚛️</span>
+                <span class="card-name">React</span>
+            </div>
+            <div class="stack-card">
+                <span class="card-icon">🟢</span>
+                <span class="card-name">Node.js</span>
+            </div>
+
+            <div class="stack-card">
+                <span class="card-icon">🚀</span>
+                <span class="card-name">FastAPI</span>
+            </div>
+            <div class="stack-card">
+                <span class="card-icon">🐘</span>
+                <span class="card-name">PostgreSQL</span>
+            </div>
+            <div class="stack-card">
+                <span class="card-icon">🔧</span>
+                <span class="card-name">Git</span>
+            </div>
+            <div class="stack-card">
+                <span class="card-icon">🧠</span>
+                <span class="card-name">AI</span>
+            </div>
+            <div class="stack-card">
+                <span class="card-icon"><i class="devicon-typescript-plain colored"></i></span>
+                <span class="card-name">TypeScript</span>
+            </div>
+            <div class="stack-card">
+                <span class="card-icon">🗃️</span>
+                <span class="card-name">SQLite</span>
+            </div>
+            <div class="stack-card">
+                <span class="card-icon">🐳</span>
+                <span class="card-name">Docker</span>
+            </div>
+
+        </div>
+
+        </div>
+    </section>
+    <section class="section_1" id="contact">
+        <h1 class="stack">Get In Touch</h1>
+        <p class="mstack">Have a project in mind? Let's work together!</p>
+        <div class="contact-form">
+            <div class="form">
+                <p class="-text">Telegram</p>
+                <a class="tg-link" href="https://t.me/bzioz" target="_blank"> Message on Telegram</a>
+                <div class="divider">or</div>
+                <p class="-text">Email</p>
+                <a class="email-link" href="mailto:azizbekmadzitov@gmail.com">azizbekmadzitov@gmail.com</a>
+            </div>
+        </div>
+
+    </section>
+    <section class="lasr">
+        <hr class="line2">
+        <div class="last">
+            <div class="last-info">
+                <p class="designed">Azizbek Madzhitov</p>
+                <p class="copy">© 2026 Azizbek Madzhitov. All rights reserved.</p>
+            </div>
+            <div class="icons">
+                <div class="contact_buttons">
+                    <div class="git_button">
+                        <a  target="_blank" href="https://github.com/AzizIo"><img class="image" src="./assets/github-svgrepo-com.svg" alt=""></a>
+                    </div>
+                    <div class="telegram_button">
+                        <a href="https://t.me/bzioz" target="_blank"><img class="image" src="./assets/telegram-svgrepo-com.svg" alt=""></a>
+                    </div>
+                    <div class="email_button">
+                        <a href="mailto:azizbekmadzitov@gmail.com"><img class="image" src="./assets/email-1-svgrepo-com.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="links">
+                <button class="link-btn" onclick="scrollToSection('projects')">Projects</button>
+                <button class="link-btn" onclick="scrollToSection('about')">About Me</button>
+                <button class="link-btn" onclick="scrollToSection('contact')">Contact</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+
+</html>
